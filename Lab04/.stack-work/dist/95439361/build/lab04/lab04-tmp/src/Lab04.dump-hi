@@ -1,0 +1,152 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-21 02:45:34.8588824 UTC
+
+interface main@main:Lab04 7103
+  interface hash: 427854e915fa78d89dec9637dc22a563
+  ABI hash: 9921dcadd887e89d79918b853be3a41b
+  export-list hash: 49c3299c7d39f66724a7a1c660e80a17
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: e6fe0e655598c258fb0ce126e9604d8a
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lab04.done04
+  Lab04.execute04
+  Lab04.exit04
+  Lab04.mkprompt
+  Lab04.prompt04
+  Lab04.thisIsLab04
+  Lab04.State
+module dependencies: BinTree
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:GHC.Base ab3ff5d7de26c5c2e08d2bb04c08d54e
+import  -/  base-4.8.2.0:GHC.IO.Handle.Text 63acbf1877bdd3b1d920898587435877
+import  -/  base-4.8.2.0:GHC.Num 099c29dfc2c0e3c154d011e91b663293
+import  -/  base-4.8.2.0:GHC.Show 81f797f6fb519cae2341362c0c4308de
+import  -/  base-4.8.2.0:Prelude 0f9dd1bcfa413fa55bb6dca444292bf6
+import  -/  base-4.8.2.0:System.IO 1df80b4c86d7c7612f2b342f2d372da9
+import  -/  base-4.8.2.0:Text.Read 8dc468847f4d0ed117de32cf47cec10a
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  BinTree ca58cf06d4f77796ae5bc113bccbfd99
+  exports: 1aa04a492847ef4ea9c91d8d8caf1be1
+  BinTree d0f265c187c8504b74c2bf81f9febf25
+  treeInsert 66600019039ec57c13f95e3c5666a135
+  treeLookup 5e5c85b2db1bc6943f3a79d5736fa541
+  treeShowDatum 24bd65f1566ea15506b8278cb9df6bc2
+fb9a42da6358ac891eeebedd5320dbf0
+  type State =
+    (BinTree.BinTree GHC.Base.String GHC.Types.Float, GHC.Types.Float)
+8d5bd6616f40888ac0dd167abbcd17d3
+  done04 :: [GHC.Types.Char] -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ command :: [GHC.Types.Char] ->
+                 GHC.Base.eqString command Lab04.done1) -}
+46c5ab7b6f04229f005abedf387c8ebd
+  done1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "exit"#) -}
+423ce7c2feaf485b95060f2a6427f767
+  execute04 ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.IO.Handle.Types.Handle
+    -> [GHC.Types.Char]
+    -> (BinTree.BinTree GHC.Base.String GHC.Types.Float,
+        GHC.Types.Float)
+    -> GHC.Types.IO
+         (BinTree.BinTree GHC.Base.String GHC.Types.Float, GHC.Types.Float)
+  {- Arity: 5, Strictness: <L,U><L,U><S,1*U><L,U(U,U(U))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Lab04.execute1
+                  `cast`
+                (<GHC.IO.Handle.Types.Handle>_R
+                 ->_R <GHC.IO.Handle.Types.Handle>_R
+                 ->_R <[GHC.Types.Char]>_R
+                 ->_R <(BinTree.BinTree GHC.Base.String GHC.Types.Float,
+                        GHC.Types.Float)>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0]
+                               <(BinTree.BinTree GHC.Base.String GHC.Types.Float,
+                                 GHC.Types.Float)>_R)) -}
+6ff5bdef32bfb9ecd16e99e4464cf941
+  execute1 ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.IO.Handle.Types.Handle
+    -> [GHC.Types.Char]
+    -> (BinTree.BinTree GHC.Base.String GHC.Types.Float,
+        GHC.Types.Float)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (BinTree.BinTree GHC.Base.String GHC.Types.Float,
+           GHC.Types.Float) #)
+  {- Arity: 5, Strictness: <L,U><L,U><S,1*U><L,U(U,U(U))><L,U> -}
+1435a680800a153ca761b5dcb3b6ac44
+  exit04 :: GHC.Base.Monad m => (t, a) -> m a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLC(S)L),1*U(A,A,A,1*C1(U),A)><S,1*U(A,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ t
+                   @ (m :: * -> *)
+                   @ a
+                   $dMonad :: GHC.Base.Monad m
+                   ds :: (t, a) ->
+                 case ds of wild { (,) binTree x ->
+                 GHC.Base.return @ m $dMonad @ a x }) -}
+275da4e414f27f7afadcf7291d62a7ae
+  mkprompt :: GHC.Show.Show a => (t, a) -> GHC.Base.String
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LC(S)L),1*U(A,1*C1(U),A)><S,1*U(A,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ t @ a $dShow :: GHC.Show.Show a ds :: (t, a) ->
+                 case ds of wild { (,) binTree x -> GHC.Show.show @ a $dShow x }) -}
+25fc087599a0df12581b04a65b2f909f
+  prompt04 ::
+    GHC.Show.Show a =>
+    GHC.IO.Handle.Types.Handle -> (t, a) -> GHC.Types.IO ()
+  {- Arity: 4,
+     Strictness: <L,1*U(A,1*C1(U),A)><S,U><L,1*U(A,U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Lab04.prompt1
+                  `cast`
+                (forall t a.
+                 <GHC.Show.Show a>_R
+                 ->_R <GHC.IO.Handle.Types.Handle>_R
+                 ->_R <(t, a)>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+0612f3e5c6773e71fafa8817102ef286
+  prompt1 ::
+    GHC.Show.Show a =>
+    GHC.IO.Handle.Types.Handle
+    -> (t, a)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4,
+     Strictness: <L,1*U(A,1*C1(U),A)><S,U><L,1*U(A,U)><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ t
+                   @ a
+                   $dShow :: GHC.Show.Show a
+                   hout :: GHC.IO.Handle.Types.Handle
+                   state :: (t, a)
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   hout
+                   (Lab04.mkprompt @ t @ a $dShow state)
+                   GHC.Types.False
+                   eta) -}
+c3b838dad7606e957eef18366e6560bc
+  thisIsLab04 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "This is Lab 4"#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

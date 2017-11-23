@@ -1,0 +1,382 @@
+
+==================== FINAL INTERFACE ====================
+2016-11-28 09:40:54.8428979 UTC
+
+interface main@main:Lab03 7103
+  interface hash: 4b51cd5c6437676947163f359a2dcd07
+  ABI hash: a5780d3d373436169013feda1660dd5e
+  export-list hash: cbafb1abd4d0443843a30a499c628d25
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 513585df1e8f2b0a8eb27830f0f58f34
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lab03.alphaChr
+  Lab03.alphaOrd
+  Lab03.br_emp_a1
+  Lab03.br_left_a1_b2
+  Lab03.br_right_a1_b2
+  Lab03.empCI
+  Lab03.empIC
+  Lab03.emptyX2
+  Lab03.emptyX4
+  Lab03.ins1
+  Lab03.ins2
+  Lab03.ins3
+  Lab03.ins4
+  Lab03.leaf_1a
+  Lab03.leaf_2b
+  Lab03.leaf_a1
+  Lab03.leaf_b2
+  Lab03.thisIsLab03
+  Lab03.treeInsert
+  Lab03.treeLookup
+  Lab03.treeMap
+  Lab03.treeShow
+  Lab03.BinTree{Lab03.Branch Lab03.Empty Lab03.Leaf}
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Data.Char 402e29ff351f87d4b376346195635026
+import  -/  base-4.8.2.0:GHC.Base ab3ff5d7de26c5c2e08d2bb04c08d54e
+import  -/  base-4.8.2.0:GHC.Char 612e350e38947989d78fc181dfd596f1
+import  -/  base-4.8.2.0:GHC.Num 099c29dfc2c0e3c154d011e91b663293
+import  -/  base-4.8.2.0:GHC.Show 81f797f6fb519cae2341362c0c4308de
+import  -/  base-4.8.2.0:Prelude 0f9dd1bcfa413fa55bb6dca444292bf6
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+b62feef59b1c8bb28d288bef5e1453fd
+  $fEqBinTree ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq d) =>
+    GHC.Classes.Eq (Lab03.BinTree k d)
+  DFunId[0]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ k
+                      @ d
+                      $dEq :: GHC.Classes.Eq k
+                      $dEq1 :: GHC.Classes.Eq d.
+                  @ (Lab03.BinTree k d)
+                  (Lab03.$fEqBinTree_$c== @ k @ d $dEq $dEq1)
+                  (Lab03.$fEqBinTree_$c/= @ k @ d $dEq $dEq1) -}
+b62feef59b1c8bb28d288bef5e1453fd
+  $fEqBinTree_$c/= ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq d) =>
+    Lab03.BinTree k d -> Lab03.BinTree k d -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ k
+                   @ d
+                   $dEq :: GHC.Classes.Eq k
+                   $dEq1 :: GHC.Classes.Eq d
+                   a :: Lab03.BinTree k d
+                   b :: Lab03.BinTree k d ->
+                 case Lab03.$fEqBinTree_$c== @ k @ d $dEq $dEq1 a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+b62feef59b1c8bb28d288bef5e1453fd
+  $fEqBinTree_$c== ::
+    (GHC.Classes.Eq k, GHC.Classes.Eq d) =>
+    Lab03.BinTree k d -> Lab03.BinTree k d -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(C(C1(U)),A)><S,1*U><S,1*U> -}
+b62feef59b1c8bb28d288bef5e1453fd
+  $fShowBinTree ::
+    (GHC.Show.Show k, GHC.Show.Show d) =>
+    GHC.Show.Show (Lab03.BinTree k d)
+  DFunId[0]
+  {- Arity: 2, Strictness: <L,U(A,C(U),A)><L,U(A,C(U),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ k
+                      @ d
+                      $dShow :: GHC.Show.Show k
+                      $dShow1 :: GHC.Show.Show d.
+                  @ (Lab03.BinTree k d)
+                  (Lab03.$fShowBinTree_$cshowsPrec @ k @ d $dShow $dShow1)
+                  (Lab03.$fShowBinTree_$cshow @ k @ d $dShow $dShow1)
+                  (Lab03.$fShowBinTree_$cshowList @ k @ d $dShow $dShow1) -}
+b62feef59b1c8bb28d288bef5e1453fd
+  $fShowBinTree_$cshow ::
+    (GHC.Show.Show k, GHC.Show.Show d) =>
+    Lab03.BinTree k d -> GHC.Base.String
+  {- Arity: 3, Strictness: <L,U(A,C(U),A)><L,U(A,C(U),A)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ k
+                   @ d
+                   $dShow :: GHC.Show.Show k
+                   $dShow1 :: GHC.Show.Show d
+                   eta :: Lab03.BinTree k d ->
+                 Lab03.treeShow @ k @ d $dShow $dShow1 GHC.Types.False eta) -}
+b62feef59b1c8bb28d288bef5e1453fd
+  $fShowBinTree_$cshowList ::
+    (GHC.Show.Show k, GHC.Show.Show d) =>
+    [Lab03.BinTree k d] -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,U(A,C(U),A)><L,U(A,C(U),A)><S,1*U><L,U>,
+     Unfolding: (\ @ k
+                   @ d
+                   $dShow :: GHC.Show.Show k
+                   $dShow1 :: GHC.Show.Show d
+                   ls :: [Lab03.BinTree k d]
+                   s :: GHC.Base.String ->
+                 GHC.Show.showList__
+                   @ (Lab03.BinTree k d)
+                   (\ x :: Lab03.BinTree k d s1 :: GHC.Base.String[OneShot] ->
+                    GHC.Base.++
+                      @ GHC.Types.Char
+                      (Lab03.treeShow @ k @ d $dShow $dShow1 GHC.Types.False x)
+                      s1)
+                   ls
+                   s) -}
+b62feef59b1c8bb28d288bef5e1453fd
+  $fShowBinTree_$cshowsPrec ::
+    (GHC.Show.Show k, GHC.Show.Show d) =>
+    GHC.Types.Int -> Lab03.BinTree k d -> GHC.Show.ShowS
+  {- Arity: 5,
+     Strictness: <L,U(A,C(U),A)><L,U(A,C(U),A)><L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ k
+                   @ d
+                   $dShow :: GHC.Show.Show k
+                   $dShow1 :: GHC.Show.Show d
+                   ds :: GHC.Types.Int
+                   x :: Lab03.BinTree k d
+                   s :: GHC.Base.String ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b c :: GHC.Types.Char -> b -> b[OneShot] n :: b[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Lab03.treeShow @ k @ d $dShow $dShow1 GHC.Types.False x))
+                   s) -}
+b62feef59b1c8bb28d288bef5e1453fd
+  data BinTree k d
+    = Empty
+    | Leaf k d
+    | Branch (Lab03.BinTree k d) k d (Lab03.BinTree k d)
+    Promotable
+6fca3362d024d607c5671d3c94ff96c2
+  alphaChr :: GHC.Types.Int -> GHC.Types.Char
+  {- Arity: 1, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ i :: GHC.Types.Int ->
+                 case i of wild { GHC.Types.I# x ->
+                 let {
+                   i# :: GHC.Prim.Int# = GHC.Prim.+# x 96
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.leWord#
+                           (GHC.Prim.int2Word# i#)
+                           __word 1114111) of wild1 {
+                   GHC.Types.False -> GHC.Char.chr2 i#
+                   GHC.Types.True -> GHC.Types.C# (GHC.Prim.chr# i#) } }) -}
+53567c94e094b683d3bb701d3a7f786c
+  alphaOrd :: GHC.Types.Char -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ c :: GHC.Types.Char ->
+                 case c of wild { GHC.Types.C# c# ->
+                 GHC.Types.I# (GHC.Prim.-# (GHC.Prim.ord# c#) 96) }) -}
+7dbf04150622ae60da0797eda190bfac
+  br_emp_a1 :: Lab03.BinTree GHC.Types.Char GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Lab03.Branch
+                   @ GHC.Types.Char
+                   @ GHC.Types.Int
+                   (Lab03.Empty @ GHC.Types.Char @ GHC.Types.Int)
+                   Lab03.br_emp_a3
+                   Lab03.br_emp_a2
+                   (Lab03.Empty @ GHC.Types.Char @ GHC.Types.Int)) -}
+01e53871e757dc57433ba4de00821db3
+  br_emp_a2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1) -}
+22d0e1d6e3be2b9c72e425264c58e052
+  br_emp_a3 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'a') -}
+9d8468beff63a1f81ac3919cd8f88e15
+  br_left_a1_b1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2) -}
+6985816fb77e78b8c097af437c3aa05b
+  br_left_a1_b2 :: Lab03.BinTree GHC.Types.Char GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Lab03.Branch
+                   @ GHC.Types.Char
+                   @ GHC.Types.Int
+                   Lab03.leaf_a1
+                   Lab03.br_left_a1_b3
+                   Lab03.br_left_a1_b1
+                   (Lab03.Empty @ GHC.Types.Char @ GHC.Types.Int)) -}
+2570f5955ed964e329e39656d913cc22
+  br_left_a1_b3 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'b') -}
+d4c3469a21648cdc66710e15c0c344ca
+  br_right_a1_b2 :: Lab03.BinTree GHC.Types.Char GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Lab03.Branch
+                   @ GHC.Types.Char
+                   @ GHC.Types.Int
+                   (Lab03.Empty @ GHC.Types.Char @ GHC.Types.Int)
+                   Lab03.br_emp_a3
+                   Lab03.br_emp_a2
+                   Lab03.leaf_b2) -}
+043ab1100b50b978439c38b742f4844a
+  empCI :: Lab03.BinTree GHC.Types.Char GHC.Types.Int
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Lab03.Empty @ GHC.Types.Char @ GHC.Types.Int) -}
+1bb3774a3cc1017c2ce1e0d13a168a1d
+  empIC :: Lab03.BinTree GHC.Types.Int GHC.Types.Char
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Lab03.Empty @ GHC.Types.Int @ GHC.Types.Char) -}
+ed987cae1b687b72a19507de1f8b333f
+  emptyX2 :: Lab03.BinTree () ()
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Lab03.Branch
+                   @ ()
+                   @ ()
+                   (Lab03.Empty @ () @ ())
+                   GHC.Tuple.()
+                   GHC.Tuple.()
+                   (Lab03.Empty @ () @ ())) -}
+a79ee53cc0e09d49f2b5f03c1ed7aa87
+  emptyX4 :: Lab03.BinTree () ()
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Lab03.Branch
+                   @ ()
+                   @ ()
+                   Lab03.emptyX2
+                   GHC.Tuple.()
+                   GHC.Tuple.()
+                   Lab03.emptyX2) -}
+8dd647bf78772dca6c54792271c5d7cd
+  ins1 :: Lab03.BinTree GHC.Types.Char GHC.Types.Int
+  {- Unfolding: (Lab03.ins1_$streeInsert
+                   @ GHC.Types.Int
+                   Lab03.ins8
+                   Lab03.ins7
+                   (Lab03.Empty @ GHC.Types.Char @ GHC.Types.Int)) -}
+fa3d26e8b8b0c2f914fe1bf188c28db8
+  ins10 :: GHC.Types.Char
+  {- HasNoCafRefs, Unfolding: (GHC.Types.C# 'd') -}
+3d98080ee0a85acccb63b62f369ab308
+  ins11 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 99) -}
+a0c341c698267ec3300966e247fbee7c
+  ins1_$streeInsert ::
+    GHC.Types.Char
+    -> d
+    -> Lab03.BinTree GHC.Types.Char d
+    -> Lab03.BinTree GHC.Types.Char d
+  {- Arity: 3, Strictness: <L,U(U)><L,U><S,1*U> -}
+73fb1d67a40ba629cc32138e81e6e575
+  ins2 :: Lab03.BinTree GHC.Types.Char GHC.Types.Int
+  {- Unfolding: (Lab03.ins1_$streeInsert
+                   @ GHC.Types.Int
+                   Lab03.ins10
+                   Lab03.ins9
+                   Lab03.ins1) -}
+288ba0542d51cd6b3077bed24775731d
+  ins3 :: Lab03.BinTree GHC.Types.Char GHC.Types.Int
+  {- Unfolding: (Lab03.ins1_$streeInsert
+                   @ GHC.Types.Int
+                   Lab03.br_left_a1_b3
+                   Lab03.br_left_a1_b1
+                   Lab03.ins2) -}
+669673718a74390b16d6e4a9455052e7
+  ins4 :: Lab03.BinTree GHC.Types.Char GHC.Types.Int
+  {- Unfolding: (Lab03.ins1_$streeInsert
+                   @ GHC.Types.Int
+                   Lab03.ins8
+                   Lab03.ins11
+                   Lab03.ins3) -}
+d9a5748173907f0254595eb94fa13a63
+  ins7 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 3) -}
+788a93d375aa3a9eaa9ee2d71519e267
+  ins8 :: GHC.Types.Char
+  {- HasNoCafRefs, Unfolding: (GHC.Types.C# 'c') -}
+15c60c6979128bda7b0b445e66c18fd7
+  ins9 :: GHC.Types.Int
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4) -}
+3ef75993801c3a9ce99e561bd964ecbe
+  leaf_1a :: Lab03.BinTree GHC.Types.Int GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Lab03.Leaf
+                   @ GHC.Types.Int
+                   @ GHC.Types.Char
+                   Lab03.br_emp_a2
+                   Lab03.br_emp_a3) -}
+075de668a6412b036937addf7263fe5b
+  leaf_2b :: Lab03.BinTree GHC.Types.Int GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Lab03.Leaf
+                   @ GHC.Types.Int
+                   @ GHC.Types.Char
+                   Lab03.br_left_a1_b1
+                   Lab03.br_left_a1_b3) -}
+131e33dcc9bd7254f409b2a89ee967d9
+  leaf_a1 :: Lab03.BinTree GHC.Types.Char GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Lab03.Leaf
+                   @ GHC.Types.Char
+                   @ GHC.Types.Int
+                   Lab03.br_emp_a3
+                   Lab03.br_emp_a2) -}
+c1ca8fa8febf88df3680ce0968edb6f7
+  leaf_b2 :: Lab03.BinTree GHC.Types.Char GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Lab03.Leaf
+                   @ GHC.Types.Char
+                   @ GHC.Types.Int
+                   Lab03.br_left_a1_b3
+                   Lab03.br_left_a1_b1) -}
+6fd3361426c0929ccb5b8ec2f7d71d73
+  thisIsLab03 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "This is Lab 3"#) -}
+41ab97325344e22299bfc52bb541e074
+  treeInsert ::
+    GHC.Classes.Ord k =>
+    k -> d -> Lab03.BinTree k d -> Lab03.BinTree k d
+  {- Arity: 4,
+     Strictness: <L,U(U(U,U),A,C(C1(U)),A,C(C1(U)),A,A,A)><L,U><L,U><S,1*U> -}
+953d2b3b949837e44ccb0acd3e866356
+  treeLookup ::
+    GHC.Classes.Ord k => k -> Lab03.BinTree k d -> GHC.Base.Maybe d
+  {- Arity: 3,
+     Strictness: <L,U(U(U,U),A,C(C1(U)),A,C(C1(U)),A,A,A)><L,U><S,1*U> -}
+f30d18d69b3ce17f0ee77678e7e6400a
+  treeMap ::
+    (k1 -> k2)
+    -> (d1 -> d2) -> Lab03.BinTree k1 d1 -> Lab03.BinTree k2 d2
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,C(U)><L,C(U)><S,1*U> -}
+b62feef59b1c8bb28d288bef5e1453fd
+  treeShow ::
+    (GHC.Show.Show k, GHC.Show.Show d) =>
+    GHC.Types.Bool -> Lab03.BinTree k d -> GHC.Base.String
+  {- Arity: 4,
+     Strictness: <L,U(A,C(U),A)><L,U(A,C(U),A)><L,1*U><S,1*U> -}
+instance GHC.Classes.Eq [Lab03.BinTree] = Lab03.$fEqBinTree
+instance GHC.Show.Show [Lab03.BinTree] = Lab03.$fShowBinTree
+"SPEC treeInsert @ Char _" [ALWAYS] forall @ d
+                                           $dOrd :: GHC.Classes.Ord GHC.Types.Char
+  Lab03.treeInsert @ GHC.Types.Char @ d $dOrd
+  = Lab03.ins1_$streeInsert @ d
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

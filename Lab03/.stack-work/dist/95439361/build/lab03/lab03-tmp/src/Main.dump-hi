@@ -1,0 +1,60 @@
+
+==================== FINAL INTERFACE ====================
+2016-11-28 01:01:08.0292694 UTC
+
+interface main@main:Main 7103
+  interface hash: 4f49e1a8bf6ad18aa45fe02e3fa7edd7
+  ABI hash: 0acd7066413cd4d4d49aa0650f6a53d9
+  export-list hash: 1f196230d46b142ebbd063e2f9b9ee1f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: db7ea13fc8d8b0b1a3092e811dd3faf8
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies: Lab03
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Prelude 0f9dd1bcfa413fa55bb6dca444292bf6
+import  -/  base-4.8.2.0:System.IO 1df80b4c86d7c7612f2b342f2d372da9
+import  -/  Lab03 72261caf06edf801ea5c6763972620ee
+  exports: cbafb1abd4d0443843a30a499c628d25
+  thisIsLab03 6fd3361426c0929ccb5b8ec2f7d71d73
+23e80f86316384cafb67f656f3052468
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+cb7a30db53c85a16c5181d011bd48e41
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Lab03.thisIsLab03
+                   GHC.Types.True
+                   eta) -}
+8725febf5c57c1d05465d74c181d626e
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

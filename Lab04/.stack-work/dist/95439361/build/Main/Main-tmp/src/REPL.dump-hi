@@ -1,0 +1,154 @@
+
+==================== FINAL INTERFACE ====================
+2016-12-20 23:43:15.8214987 UTC
+
+interface main@main:REPL 7103
+  interface hash: caedd941d83f71623981407158553731
+  ABI hash: 803d38c01d6a955fa575e12e6fa4d5bb
+  export-list hash: d909f20870ecd914effb556280d3fcfc
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ecd3e457ebee0ea9236a4fc5594376fb
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  REPL.hrepl
+  REPL.srepl
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:GHC.Base ab3ff5d7de26c5c2e08d2bb04c08d54e
+import  -/  base-4.8.2.0:GHC.IO.Handle.FD 2a69a258e3bff1c116eb2aa0151a648b
+import  -/  base-4.8.2.0:GHC.IO.Handle.Text 63acbf1877bdd3b1d920898587435877
+import  -/  base-4.8.2.0:GHC.IO.Handle.Types bc0cbceed6556eaf0378b716aa368d1b
+import  -/  base-4.8.2.0:Prelude 0f9dd1bcfa413fa55bb6dca444292bf6
+import  -/  base-4.8.2.0:System.IO 1df80b4c86d7c7612f2b342f2d372da9
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+9a4774a7ba2dd4141fc5819583010f3b
+  hrepl ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.IO.Handle.Types.Handle
+    -> (GHC.IO.Handle.Types.Handle -> s -> GHC.Types.IO ())
+    -> (GHC.Base.String -> GHC.Types.Bool)
+    -> (s -> GHC.Types.IO a)
+    -> (GHC.IO.Handle.Types.Handle
+        -> GHC.IO.Handle.Types.Handle
+        -> GHC.Base.String
+        -> s
+        -> GHC.Types.IO s)
+    -> s
+    -> GHC.Types.IO a
+  {- Arity: 8,
+     Strictness: <L,U><L,U><C(C(C(S))),C(C1(C1(U(U,A))))><L,C(U)><L,1*C1(C1(U(U,U)))><L,C(C1(C1(C1(C1(U(U,U))))))><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                REPL.hrepl1
+                  `cast`
+                (forall s a.
+                 <GHC.IO.Handle.Types.Handle>_R
+                 ->_R <GHC.IO.Handle.Types.Handle>_R
+                 ->_R <GHC.IO.Handle.Types.Handle -> s -> GHC.Types.IO ()>_R
+                 ->_R <GHC.Base.String -> GHC.Types.Bool>_R
+                 ->_R <s -> GHC.Types.IO a>_R
+                 ->_R <GHC.IO.Handle.Types.Handle
+                       -> GHC.IO.Handle.Types.Handle
+                       -> GHC.Base.String
+                       -> s
+                       -> GHC.Types.IO s>_R
+                 ->_R <s>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <a>_R)) -}
+877a516faa6538d524a9f629b1350307
+  hrepl1 ::
+    GHC.IO.Handle.Types.Handle
+    -> GHC.IO.Handle.Types.Handle
+    -> (GHC.IO.Handle.Types.Handle -> s -> GHC.Types.IO ())
+    -> (GHC.Base.String -> GHC.Types.Bool)
+    -> (s -> GHC.Types.IO a)
+    -> (GHC.IO.Handle.Types.Handle
+        -> GHC.IO.Handle.Types.Handle
+        -> GHC.Base.String
+        -> s
+        -> GHC.Types.IO s)
+    -> s
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, a #)
+  {- Arity: 8,
+     Strictness: <L,U><L,U><C(C(C(S))),C(C1(C1(U(U,A))))><L,C(U)><L,1*C1(C1(U(U,U)))><L,C(C1(C1(C1(C1(U(U,U))))))><L,U><L,U> -}
+faec1f73fb199b86e9d5c1728d385b0b
+  srepl ::
+    (GHC.IO.Handle.Types.Handle -> s -> GHC.Types.IO ())
+    -> (GHC.Base.String -> GHC.Types.Bool)
+    -> (s -> GHC.Types.IO a)
+    -> (GHC.IO.Handle.Types.Handle
+        -> GHC.IO.Handle.Types.Handle
+        -> GHC.Base.String
+        -> s
+        -> GHC.Types.IO s)
+    -> s
+    -> GHC.Types.IO a
+  {- Arity: 6,
+     Strictness: <L,C(C1(C1(U(U,A))))><L,C(U)><L,C(C1(U(U,U)))><L,C(C1(C1(C1(C1(U(U,U))))))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                REPL.srepl1
+                  `cast`
+                (forall s a.
+                 <GHC.IO.Handle.Types.Handle -> s -> GHC.Types.IO ()>_R
+                 ->_R <GHC.Base.String -> GHC.Types.Bool>_R
+                 ->_R <s -> GHC.Types.IO a>_R
+                 ->_R <GHC.IO.Handle.Types.Handle
+                       -> GHC.IO.Handle.Types.Handle
+                       -> GHC.Base.String
+                       -> s
+                       -> GHC.Types.IO s>_R
+                 ->_R <s>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <a>_R)) -}
+5c008a930ac65422d36b313eb317db77
+  srepl1 ::
+    (GHC.IO.Handle.Types.Handle -> s -> GHC.Types.IO ())
+    -> (GHC.Base.String -> GHC.Types.Bool)
+    -> (s -> GHC.Types.IO a)
+    -> (GHC.IO.Handle.Types.Handle
+        -> GHC.IO.Handle.Types.Handle
+        -> GHC.Base.String
+        -> s
+        -> GHC.Types.IO s)
+    -> s
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, a #)
+  {- Arity: 6,
+     Strictness: <L,C(C1(C1(U(U,A))))><L,C(U)><L,C(C1(U(U,U)))><L,C(C1(C1(C1(C1(U(U,U))))))><L,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ s
+                   @ a
+                   hprompt :: GHC.IO.Handle.Types.Handle -> s -> GHC.Types.IO ()
+                   done :: GHC.Base.String -> GHC.Types.Bool
+                   exit :: s -> GHC.Types.IO a
+                   hexecute :: GHC.IO.Handle.Types.Handle
+                               -> GHC.IO.Handle.Types.Handle
+                               -> GHC.Base.String
+                               -> s
+                               -> GHC.Types.IO s
+                   state :: s
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 REPL.hrepl1
+                   @ s
+                   @ a
+                   GHC.IO.Handle.FD.stdin
+                   GHC.IO.Handle.FD.stdout
+                   hprompt
+                   done
+                   exit
+                   hexecute
+                   state
+                   eta) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
